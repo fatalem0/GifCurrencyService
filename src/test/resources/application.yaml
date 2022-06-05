@@ -1,0 +1,13 @@
+param:
+  appId: 1111
+  base: USD
+  opponent: EUR
+  daysAgo: 1
+giphy:
+  url: http://localhost:8888/
+  limit: 1
+  key: 2222
+  param:
+    rich: rich
+    broke: broke
+exchangeUrl: http://localhost:8888/

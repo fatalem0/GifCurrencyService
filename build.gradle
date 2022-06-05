@@ -1,0 +1,42 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	lombokVersion = '1.18.24'
+	springStarterVersion = '2.6.7'
+	springOpenFeignVersion = '3.1.2'
+	springStarterTestVersion = '2.6.7'
+	jacksonVersion = '2.13.3'
+//	thymeleafVersion = '2.6.7'
+}
+
+dependencies {
+	implementation 'junit:junit:4.13.2'
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+	testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+	testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+	implementation "org.springframework.boot:spring-boot-starter:$springStarterVersion"
+	implementation "org.springframework.cloud:spring-cloud-starter-openfeign:$springOpenFeignVersion"
+	implementation "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
+//	implementation "org.springframework.boot:spring-boot-starter-thymeleaf:$thymeleafVersion"
+
+	testImplementation "org.springframework.boot:spring-boot-starter-test:$springStarterTestVersion"
+	testImplementation "com.github.tomakehurst:wiremock-jre8:2.33.2"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

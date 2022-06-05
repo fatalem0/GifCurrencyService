@@ -1,0 +1,13 @@
+param:
+  appId: 66a24d3e496f4b7f84de75dd2e2c88aa
+  base: USD
+  opponent: EUR
+  daysAgo: 1
+giphy:
+  url: https://api.giphy.com/v1/gifs
+  limit: 1
+  key: fnxfzrGhenVgQ4iFVjBrnQ8tHn0rrutS
+  param:
+    rich: rich
+    broke: broke
+exchangeUrl: https://openexchangerates.org/api
