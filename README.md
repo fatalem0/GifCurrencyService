@@ -1,4 +1,5 @@
 # Задание
+```
   Создать сервис, который обращается к сервису курсов валют, и отображает gif:
   • если курс по отношению к USD за сегодня стал выше вчерашнего, то отдаем рандомную отсюда https://giphy.com/search/rich
   • если ниже - отсюда https://giphy.com/search/broke
@@ -15,15 +16,18 @@
   • Результатом выполнения должен быть репо на GitHub с инструкцией по запуску
   Nice to Have
   • Сборка и запуск Docker контейнера с этим сервисом
+```
 # Описание
-  • Все настройки вынесены в application.yaml
-  • Тесты выполняются на порту 8888
+  - Все настройки вынесены в application.yaml
+  - Тесты выполняются на порту 8888
 # Как запускать
 1. Склонировать
 2. Проверить конфигурацию в application.yaml:
-    • Установить необходимую валюту
-    • Изменить appId
-    • Изменить giphy.key
+    - Установить необходимую валюту
+    - Изменить appId
+    - Изменить giphy.key
 3. Запустить в IDE или создать Docker container
 # Docker container
-  docker run -d -p 8080:8080 fatalem0/gif-currency-service:exchangeClient
+```
+docker run -d -p 8080:8080 fatalem0/gif-currency-service:exchangeClient
+```
